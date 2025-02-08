@@ -8,9 +8,10 @@ import (
 )
 
 func main() {
-	req, resp := account.NewGetConfig()
+	param := &account.GetInstrumentsParam{InstType: "SPOT"}
+	req, resp := account.NewGetInstruments(param)
 	if err := rest.TestClient.Do(req, resp); err != nil {
 		panic(err)
 	}
-	log.Println(req, resp.(*account.GetConfigResponse))
+	log.Println(req, resp.(*account.GetInstrumentsResponse))
 }
