@@ -42,6 +42,7 @@ type Order struct {
 	FillPx          string `json:"fillPx"`
 	TradeId         string `json:"tradeId"`
 	FillSz          string `json:"fillSz"`
+	FillPnl         string `json:"fillPnl"`
 	FillTime        string `json:"fillTime"`
 	AvgPx           string `json:"avgPx"`
 	State           string `json:"state"`
