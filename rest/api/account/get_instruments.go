@@ -12,7 +12,7 @@ func NewGetInstruments(param *GetInstrumentsParam) (api.IRequest, api.IResponse)
 
 type GetInstrumentsParam struct {
 	InstType string `url:"instType"`
-	Instld   string `url:"instld"`
+	InstId   string `url:"instId"`
 }
 
 type GetInstrumentsResponse struct {
