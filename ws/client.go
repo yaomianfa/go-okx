@@ -8,20 +8,24 @@ import (
 )
 
 const (
-	EndpointPublic           = "wss://ws.okx.com:8443/ws/v5/public"
-	EndpointPrivate          = "wss://ws.okx.com:8443/ws/v5/private"
-	EndpointPublicSimulated  = "wss://wspap.okx.com:8443/ws/v5/public?brokerId=9999"
-	EndpointPrivateSimulated = "wss://wspap.okx.com:8443/ws/v5/private?brokerId=9999"
+	EndpointBusiness          = "wss://ws.okx.com:8443/ws/v5/business"
+	EndpointPublic            = "wss://ws.okx.com:8443/ws/v5/public"
+	EndpointPrivate           = "wss://ws.okx.com:8443/ws/v5/private"
+	EndpointBusinessSimulated = "wss://ws.okx.com:8443/ws/v5/business?brokerId=9999"
+	EndpointPublicSimulated   = "wss://wspap.okx.com:8443/ws/v5/public?brokerId=9999"
+	EndpointPrivateSimulated  = "wss://wspap.okx.com:8443/ws/v5/private?brokerId=9999"
 
 	PingTimeout  = 20 * time.Second
 	PingDeadline = 10 * time.Second
 )
 
 var (
-	DefaultClientPublic           = NewClient(EndpointPublic)
-	DefaultClientPrivate          = NewClient(EndpointPrivate)
-	DefaultClientPublicSimulated  = NewClient(EndpointPublicSimulated)
-	DefaultClientPrivateSimulated = NewClient(EndpointPrivateSimulated)
+	DefaultClientBusiness          = NewClient(EndpointBusiness)
+	DefaultClientPublic            = NewClient(EndpointPublic)
+	DefaultClientPrivate           = NewClient(EndpointPrivate)
+	DefaultClientBusinessSimulated = NewClient(EndpointBusinessSimulated)
+	DefaultClientPublicSimulated   = NewClient(EndpointPublicSimulated)
+	DefaultClientPrivateSimulated  = NewClient(EndpointPrivateSimulated)
 
 	PingMessage = []byte("ping")
 )

@@ -26,3 +26,7 @@ func SubscribeKline(args *ws.Args, handler HandlerKline, handlerError ws.Handler
 
 	return NewPublic(simulated).Subscribe(args, h, handlerError)
 }
+
+func UnsubscribeKline(args *ws.Args, simulated bool) error {
+	return NewPublic(simulated).UnSubscribe(args)
+}

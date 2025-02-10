@@ -16,6 +16,11 @@ func NewRequestSubscribe(args interface{}) *Request {
 	return NewRequest(OpSubscribe, args)
 }
 
+// new request for unsubscribe
+func NewRequestUnSubscribe(args interface{}) *Request {
+	return NewRequest(OpUnsubscribe, args)
+}
+
 // new request for login
 func NewRequestLogin(args interface{}) *Request {
 	return NewRequest(OpLogin, args)

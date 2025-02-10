@@ -19,6 +19,13 @@ func NewOperateSubscribe(args interface{}, handler Handler, handlerError Handler
 	}
 }
 
+// unsubscribe
+func NewOperateUnsubscribe(args interface{}) *Operate {
+	return &Operate{
+		Request: NewRequestUnSubscribe(args),
+	}
+}
+
 // new login
 func NewOperateLogin(args *ArgsLogin) *Operate {
 	return &Operate{
